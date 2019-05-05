@@ -17,3 +17,6 @@ def topic_gen(documents):
     topic_line_up = [l[0] for l in topic_prob]
     print(topic_line_up)
     
+
+if __name__ == '__main__':
+    pass
