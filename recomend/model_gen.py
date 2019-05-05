@@ -3,16 +3,7 @@ from gensim import corpora
 import gensim
 
 def model_gen(documents):
-    ## Prepare docs as traing data
-    documents = ["Human machine interface for lab abc computer applications", 
-                 "A survey of user opinion of computer system response time",
-                 "The EPS user interface management system",
-                 "System and human system engineering testing of EPS",
-                 "Relation of user perceived response time to error measurement",
-                 "The generation of random binary unordered trees",
-                 "The intersection graph of paths in trees",
-                 "Graph minors IV Widths of trees and well quasi ordering",
-                 "Graph minors A survey"]
+    ## Prepare stop words
     stop_words = "for a of the and to in".split()
     
     ## Transform docs into list of words
@@ -39,7 +30,8 @@ def model_gen(documents):
     
     ## Growing lda model
     lda = gensim.models.ldamodel.LdaModel(corpus=corpus, num_topics=5, id2word=dictionary)
-    lda.save('.recomend/lda.model')
+    lda.save('recomend/lda.model')
+    print("################## Recomendation Engine: Topic model files (lda.model ect...) generated.")
     
 
 if __name__ == '__main__':
