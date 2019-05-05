@@ -1,11 +1,10 @@
 import gensim
 
-def topic_gen():
+def topic_gen(documents):
     lda_model = gensim.models.ldamodel.LdaModel.load('recomend/lda.model')
     dictionary = lda_model.id2word
     
     ## Prediction
-    documents = ["Computer themselves and software yet to be developed will revolutionize the way we learn"]
     texts = [[word for word in document.lower().split()] for document in documents]
     corpus = [dictionary.doc2bow(text) for text in texts]
     
