@@ -2,7 +2,7 @@ from collections import defaultdict
 from gensim import corpora
 import gensim
 
-def model_gen():
+def model_gen(documents):
     ## Prepare docs as traing data
     documents = ["Human machine interface for lab abc computer applications", 
                  "A survey of user opinion of computer system response time",
