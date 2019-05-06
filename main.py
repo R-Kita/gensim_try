@@ -13,5 +13,6 @@ docs_train = ["Human machine interface for lab abc computer applications",
 model_gen(docs_train)
 
 document = ["Computer themselves and software yet to be developed will revolutionize the way we learn"]
-topic_gen(document)
+out = topic_gen(document)
 
+print(out)
