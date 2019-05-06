@@ -4,8 +4,14 @@ import gensim
 
 def model_gen(documents):
     ## Prepare stop words
-    stop_words = "for a of the and to in".split()
-    
+    # stop_words = "for a of the and to in".split()
+    with open("recomend/stop_words.txt") as f:
+        stop_words = f.read()
+        stop_words = stop_words.split()
+    ## for develop
+    print("Stop words: " + str(stop_words))
+
+
     ## Transform docs into list of words
     ## Remove stop words
     texts = []
